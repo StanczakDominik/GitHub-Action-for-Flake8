@@ -7,7 +7,7 @@ LABEL "com.github.actions.color"="6f42c1"
 
 RUN apk add --no-cache bash
 RUN pip install --upgrade pip
-RUN pip install flake8
+RUN pip install flake8 darglint flake8-docstrings
 RUN python --version ; pip --version ; echo "flake8 $(flake8 --version)"
 
 COPY entrypoint.sh /
